@@ -8,6 +8,11 @@
   src: url('./assets/fonts/FiraMono-Regular.otf');
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 $bg-color: #2f3541;
 $white: #eceff4;
 $second-white: #d8dee9ad;
@@ -23,6 +28,7 @@ body {
   background-color: $bg-color;
   color: $second-white;
   font-family: 'Fira Mono', monospace;
+  width: 100%;
 }
 
 h1,
@@ -34,6 +40,7 @@ h6 {
   color: $white;
   font-family: 'Gotham', sans-serif;
   font-weight: normal;
+  display: table;
 }
 
 .tint-text {

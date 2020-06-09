@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import "./App.scss";
+import React, { Fragment } from 'react';
+import './App.scss';
 
-import Header from "./sections/Header";
+import Header from './sections/Header/Header';
 
 function App() {
   return (
