@@ -8,7 +8,7 @@ const Nav = styled.nav`
   direction: row;
   justify-content: flex-end;
   align-items: center;
-  width: 90%;
+  width: 80%;
   margin: auto;
   padding-top: 2.5rem;
 `;
@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <Nav>
       <MenuList>
-        <MenuItem>About Me</MenuItem>
+        <MenuItem to="http://raulchirinos.tech">About Me</MenuItem>
         <MenuItem>Articles</MenuItem>
         <MenuItem>Projects</MenuItem>
         <MenuItem tint>Contact</MenuItem>
