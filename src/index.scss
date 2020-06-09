@@ -18,6 +18,12 @@ $white: #eceff4;
 $second-white: #d8dee9ad;
 $tint-color: #d08770;
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
