@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Navbar from '../../components/Navbar/Navbar';
 import HeaderCont from '../../components/HeaderCont';
 import BgShapes from '../../assets/img/header-bg.svg';
+import SocialRow from '../../components/SocialRow';
 
 const Bg = styled.img`
   width: 56%;
@@ -21,6 +22,7 @@ export default function Header() {
       <Navbar />
       <div className="header_container">
         <HeaderCont />
+        <SocialRow />
       </div>
       <Bg src={BgShapes} />
     </section>
