@@ -1,14 +1,46 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('./assets/fonts/GothamMedium.ttf');
+}
+
+@font-face {
+  font-family: 'Fira Mono';
+  src: url('./assets/fonts/FiraMono-Regular.otf');
+}
+
+$bg-color: #2f3541;
+$white: #eceff4;
+$second-white: #d8dee9ad;
+$tint-color: #d08770;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  //   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2e3440;
+  background-color: $bg-color;
+  color: $second-white;
+  font-family: 'Fira Mono', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $white;
+  font-family: 'Gotham', sans-serif;
+  font-weight: normal;
+}
+
+.tint-text {
+  color: $tint-color;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
