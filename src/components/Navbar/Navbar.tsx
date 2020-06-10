@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <Nav>
       <MenuList>
-        <MenuItem to="http://raulchirinos.tech">About Me</MenuItem>
+        <MenuItem to="#about">About Me</MenuItem>
         <MenuItem>Articles</MenuItem>
         <MenuItem>Projects</MenuItem>
         <MenuItem tint>Contact</MenuItem>
