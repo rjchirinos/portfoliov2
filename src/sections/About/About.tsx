@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SectionLayout from '../../components/SectionLayout';
 import ColorFilterImage from '../../components/ColorFilterImage';
 import Photo from '../../assets/img/photo.png';
+import AboutBg from '../../assets/img/about-bg.svg';
 
 const Container = styled.section`
   min-height: 100vh;
@@ -30,6 +31,13 @@ const UL = styled.ul`
   columns: 2;
   list-style-type: '-';
   list-style-position: inside;
+`;
+
+const ShapesBG = styled.img`
+  position: absolute;
+  width: 18vw;
+  right: 30px;
+  z-index: -100;
 `;
 
 export default function About() {
@@ -62,6 +70,7 @@ export default function About() {
           image={Photo}
           color="#d08770"
         />
+        <ShapesBG src={AboutBg} />
       </Container>
     </SectionLayout>
   );
