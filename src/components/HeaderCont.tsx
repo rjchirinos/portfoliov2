@@ -8,18 +8,18 @@ const P = styled.p`
 
 const Title = styled.h1`
   margin-bottom: 0.6rem;
-  font-size: 2.8rem;
+  font-size: 3.4rem;
 `;
 
 const Subtitle = styled.h3`
-  margin-bottom: 0.6rem;
-  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 3.4rem;
   color: #d8dee9ad;
 `;
 
 const Description = styled.p`
-  width: 20%;
-  min-width: 310px;
+  margin-bottom: 1.2rem;
+  width: 370px;
 `;
 
 export default function HeaderCont(props: any) {
@@ -29,9 +29,8 @@ export default function HeaderCont(props: any) {
       <Title>Raúl Chirinos</Title>
       <Subtitle>I create stunning webapps</Subtitle>
       <Description>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et
+        I am a Fullstack Developer based in Venezuela and I focus in building
+        webapps and functional websites with the latest technologies.
       </Description>
     </div>
   );
