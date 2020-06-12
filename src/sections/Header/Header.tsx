@@ -9,7 +9,7 @@ import SocialRow from '../../components/SocialRow';
 
 const Bg = styled.img`
   width: 56%;
-  min-width: 600px;
+  min-width: 650px;
   position: absolute;
   right: 0;
   bottom: 0;
