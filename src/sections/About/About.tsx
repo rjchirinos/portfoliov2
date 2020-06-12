@@ -5,42 +5,63 @@ import SectionLayout from '../../components/SectionLayout';
 import ColorFilterImage from '../../components/ColorFilterImage';
 import Photo from '../../assets/img/photo.png';
 import AboutBg from '../../assets/img/about-bg.svg';
-
-const Container = styled.section`
-  min-height: 100vh;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.4rem;
-  margin-top: -2rem;
-`;
-
-const DescriptionContainer = styled.div`
-  width: 60%;
-  color: #eceff4de;
-`;
-
-const TextTint = styled.span`
-  color: #d08770;
-  font-weight: bold;
-`;
-
-const UL = styled.ul`
-  columns: 2;
-  list-style-type: '-';
-  list-style-position: inside;
-`;
-
-const ShapesBG = styled.img`
-  position: absolute;
-  width: 18vw;
-  right: 30px;
-  z-index: -100;
-`;
+import useWindowsDimensions from '../../hooks/useWindowsDimensions.js';
 
 export default function About() {
+  const { isSmall, isMedium } = useWindowsDimensions(600, 900);
+
+  const Container = styled.section`
+    min-height: 100vh;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-top: -2rem;
+    ${isSmall &&
+    `
+      margin-top: 0;
+      justify-content: flex-start;
+      width: 95%;
+      flex-direction: column-reverse;
+      position: relative;
+    `}
+  `;
+
+  const DescriptionContainer = styled.div`
+    width: 60%;
+    color: #eceff4de;
+    ${isSmall &&
+    `
+      width: 100%;
+      margin-top: 2rem;
+    `}
+  `;
+
+  const TextTint = styled.span`
+    color: #d08770;
+    font-weight: bold;
+  `;
+
+  const UL = styled.ul`
+    columns: 2;
+    list-style-type: '-';
+    list-style-position: inside;
+  `;
+
+  const ShapesBG = styled.img`
+    position: absolute;
+    width: 18vw;
+    right: 30px;
+    z-index: -100;
+    ${isSmall &&
+    `
+      width: 40vw;
+      top: 0;
+      right: 0;
+    `}
+  `;
   return (
     <SectionLayout id="about" sectionTitle="About Me">
       <Container>
@@ -65,7 +86,7 @@ export default function About() {
           </UL>
         </DescriptionContainer>
         <ColorFilterImage
-          size="25vw"
+          size={isSmall ? '70vw' : '25vw'}
           borderRadius="50%"
           image={Photo}
           color="#d08770"
