@@ -20,7 +20,7 @@ export default function Articles() {
           );
         })}
       </ArticlesContainer>
-      <Button />
+      <Button btText="Show More" handleClick={() => alert('clicked')} />
     </SectionLayout>
   );
 }
