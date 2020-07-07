@@ -4,26 +4,21 @@ import SectionLayout from '../../components/SectionLayout';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
 import ArticlesContainer from '../../components/ArticlesContainer/ArticlesContainer';
 import Button from '../../components/Button/Button';
+import articlesList from './articlesList';
 
 export default function Articles() {
   return (
     <SectionLayout id="articles" sectionTitle="Articles">
       <ArticlesContainer>
-        <ArticleCard
-          link="http://dev.to"
-          title="Composition over Inheritance"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"
-        />
-        <ArticleCard
-          link="http://dev.to"
-          title="Best fonts for coding"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"
-        />
-        <ArticleCard
-          link="http://dev.to"
-          title="Intro to React Hooks"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam"
-        />
+        {articlesList.map((article: any) => {
+          return (
+            <ArticleCard
+              link={article.link}
+              title={article.title}
+              description={article.description}
+            />
+          );
+        })}
       </ArticlesContainer>
       <Button />
     </SectionLayout>
